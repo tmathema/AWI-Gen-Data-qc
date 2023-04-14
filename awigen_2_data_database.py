@@ -24,7 +24,7 @@ if __name__ == '__main__':
         phase2_data = phase2_data[phase2_data['participant_identification_complete'] == 2]
 
         #phase 1(this will be extracted from sql after setting it up)
-        phase1 = pd.read_csv(r"C:\Users\A0072059\Documents\Awigen1\all_sites_20_12_22.txt", delimiter=",", low_memory=False)
+        phase1 = pd.read_csv(path + "/all_sites_20_12_22.txt", delimiter=",", low_memory=False)
 
         # all sites do not have these variables
 
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     #biomarkers data
 
     #to extract from REDCap and later from the database
-    biomarkers = pd.read_csv(r"C:\Users\A0072059\Documents\Awigen2\biomarkers\AWIGen2BiomarkerResu-AWIGen2Biomarkers_DATA_2023-03-23_1114.csv", delimiter=";",
+    biomarkers = pd.read_csv(path + "/AWIGen2BiomarkerResu-AWIGen2Biomarkers_DATA_2023-03-23_1114.csv", delimiter=";",
                              low_memory=False)
     biomarkers.rename(columns={'awigen_id': 'study_id'}, inplace=True)
 
